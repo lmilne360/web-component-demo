@@ -7,20 +7,19 @@ import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ButtonComponent
+    ButtonComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
   entryComponents: [ButtonComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const customButton = createCustomElement(ButtonComponent, {injector});
-    customElements.define('custom-button', customButton);
+  constructor(injector: Injector) {
+    const btn = createCustomElement(ButtonComponent, {injector});
+    customElements.define('custom-button', btn);
   }
 
   ngDoBootstrap() {}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EL DEM</title>
+  <base href="/">
+  <script src="elements.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <custom-button label="First Value" [cli]></custom-button>
+
+  <script>
+
+
+    const button = document.querySelector('custom-button');
+    button.addEventListener('action', (event) => {
+      console.log(`Click amount: ${event.detail}`);
+    })
+  </script>
+</body>
+</html>

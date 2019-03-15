@@ -3,9 +3,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 @Component({
   selector: 'custom-button',
   template: `
-    <p>
-      button works!
-    </p>
+   <button (click)="handleClick()">{{label}}</button>
   `,
   styles: [`
   button {

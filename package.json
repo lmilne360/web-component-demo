@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --prod --output-hashing=none && npm run package",
+    "package":
+    "bash -c 'cat dist/elements-demo/{runtime,polyfills,scripts,main}.js' > elements.js",
+    "serve": "http-server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
